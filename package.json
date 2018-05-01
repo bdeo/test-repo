@@ -10,7 +10,7 @@
     "release:major": "npm version major -m \"bump version number\"",
     "preversion": "git fetch && git checkout master && git pull",
     "version": "git checkout -b \"release-$(node -p -e \"require('./package.json').version\")\"",
-    "postversion": "sh publish.sh"
+    "postversion": "sh prepublish.sh"
   },
   "author": "Brandon Deo",
   "license": "MIT"
