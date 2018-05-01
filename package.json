@@ -1,6 +1,6 @@
 {
   "name": "test-repo",
-  "version": "1.0.2",
+  "version": "1.1.1",
   "description": "Build script testing",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,8 @@
     "release:minor": "npm version minor -m \"bump version number\"",
     "release:major": "npm version major -m \"bump version number\"",
     "preversion": "git fetch && git checkout master && git pull",
-    "version": "git checkout -b \"release-$(node -p -e \"require('./package.json').version\")\"",
-    "postversion": "sh publish.sh"
+    "version": "git checkout -b release-$(node -p -e \"require('./package.json').version\")",
+    "postversion": "sh prepublish.sh"
   },
   "author": "Brandon Deo",
   "license": "MIT"
