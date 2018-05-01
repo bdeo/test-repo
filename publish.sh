@@ -1,6 +1,6 @@
 git push -u "release-$(node -p -e 'require('./package.json').version')"
 git checkout production
-git git reset --hard
+git reset --hard
 git merge --no-ff "release-$(node -p -e 'require('./package.json').version')"
 git push
 git push --tags
