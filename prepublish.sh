@@ -1,4 +1,5 @@
-$branchname = "release-$(node -p -e "require('./package.json').version")"
+version=$(node -p -e "require('./package.json').version")
+branchname="release-$version"
 git push -u origin $branchname
 git checkout production
 git reset --hard
