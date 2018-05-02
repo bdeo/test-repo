@@ -1,7 +1,7 @@
 {
   "name": "test-repo",
   "version": "2.3.0",
-  "description": "Build script testing",
+  "description": "Build script testing, automates release and git flow",
   "main": "index.js",
   "scripts": {
     "build": "echo \"building...\"",
