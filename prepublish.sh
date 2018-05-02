@@ -1,6 +1,6 @@
 version=$(node -p -e "require('./package.json').version")
 branchname="release-$version"
-git commit -m"bump version number"
+git commit -a -m"bump version number"
 git push -u origin $branchname
 git checkout production
 git reset --hard
