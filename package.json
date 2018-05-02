@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "echo \"building...\"",
-    "release:patch": "npm version patch -m \"bump version number\"",
-    "release:minor": "npm version minor -m \"bump version number\"",
-    "release:major": "npm version major -m \"bump version number\"",
+    "release:patch": "npm --no-git-tag-version version patch",
+    "release:minor": "npm --no-git-tag-version version minor",
+    "release:major": "npm --no-git-tag-version version major",
     "preversion": "git fetch && git checkout master && git pull",
     "version": "git checkout -b release-$(node -p -e \"require('./package.json').version\")",
     "postversion": "sh prepublish.sh"
